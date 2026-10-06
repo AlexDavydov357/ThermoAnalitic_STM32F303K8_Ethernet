@@ -1,0 +1,12 @@
+../Core/Src/protocol.c:33:6:protocol_init	1
+../Core/Src/protocol.c:37:13:reply	1
+../Core/Src/protocol.c:42:13:reply_unknown	1
+../Core/Src/protocol.c:48:13:parse_u32	7
+../Core/Src/protocol.c:69:13:reply_word_num	1
+../Core/Src/protocol.c:80:13:cmd_shut	4
+../Core/Src/protocol.c:99:13:cmd_status	2
+../Core/Src/protocol.c:114:13:handle_line	20
+../Core/Src/protocol.c:175:6:protocol_feed	7
+../Core/Src/protocol.c:198:6:protocol_send_boot	1
+../Core/Src/protocol.c:208:13:protocol_task	1
+../Core/Src/protocol.c:221:6:protocol_start_task	1

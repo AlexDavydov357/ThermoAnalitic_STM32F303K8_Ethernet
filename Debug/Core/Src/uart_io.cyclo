@@ -1,0 +1,9 @@
+../Core/Src/uart_io.c:35:6:uart_io_init	1
+../Core/Src/uart_io.c:48:6:uart_io_usart1_irq	5
+../Core/Src/uart_io.c:67:6:uart_io_usart1_irq_post	1
+../Core/Src/uart_io.c:73:8:uart_rx_read	1
+../Core/Src/uart_io.c:78:6:uart_send	3
+../Core/Src/uart_io.c:94:13:tx_task	4
+../Core/Src/uart_io.c:116:6:uart_io_start_task	1
+../Core/Src/uart_io.c:122:6:HAL_UART_TxCpltCallback	3
+../Core/Src/uart_io.c:131:6:HAL_UART_ErrorCallback	4

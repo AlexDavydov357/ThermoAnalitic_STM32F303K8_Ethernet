@@ -1,0 +1,13 @@
+../Core/Src/lamps.c:31:6:lamps_init	1
+../Core/Src/lamps.c:36:6:lamps_set_time	1
+../Core/Src/lamps.c:41:10:lamps_get_time	1
+../Core/Src/lamps.c:46:6:lamps_get_state	2
+../Core/Src/lamps.c:54:13:post	1
+../Core/Src/lamps.c:59:6:lamps_request_on	1
+../Core/Src/lamps.c:60:6:lamps_request_off	1
+../Core/Src/lamps.c:62:13:lamps_write	1
+../Core/Src/lamps.c:69:13:send_countd	1
+../Core/Src/lamps.c:84:12:lamps_wait_ticks	4
+../Core/Src/lamps.c:97:6:lamps_step	9
+../Core/Src/lamps.c:135:13:lamps_task	2
+../Core/Src/lamps.c:150:6:lamps_start_task	1

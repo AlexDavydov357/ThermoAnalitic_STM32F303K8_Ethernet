@@ -1,0 +1,16 @@
+../Core/Src/shutter.c:41:6:shutter_init	16	static
+../Core/Src/shutter.c:46:6:shutter_command	16	static
+../Core/Src/shutter.c:51:17:shutter_get_state	4	static
+../Core/Src/shutter.c:56:6:shutter_sensor_fault	4	static
+../Core/Src/shutter.c:61:6:shutter_set_led	16	static
+../Core/Src/shutter.c:66:13:shutter_state_name	16	static
+../Core/Src/shutter.c:78:13:debounce	16	static
+../Core/Src/shutter.c:89:13:apply_speed	24	static
+../Core/Src/shutter.c:100:13:stop_now	8	static
+../Core/Src/shutter.c:108:13:send	16	static
+../Core/Src/shutter.c:113:13:handle_command	16	static
+../Core/Src/shutter.c:133:13:ramp	16	static
+../Core/Src/shutter.c:145:24:compute_state	4	static
+../Core/Src/shutter.c:156:6:shutter_step	24	static
+../Core/Src/shutter.c:193:6:shutter_start	8	static
+../Core/Src/shutter.c:202:6:shutter_task_run	8	static
