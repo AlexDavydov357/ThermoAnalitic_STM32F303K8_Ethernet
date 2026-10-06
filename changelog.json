@@ -4,7 +4,7 @@
     "items": [
       {
         "text": "Новая прошивка первый коммит",
-        "committed": true
+        "committed": false
       }
     ]
   }

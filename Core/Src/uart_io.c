@@ -94,18 +94,21 @@ bool uart_send(const char *s, TickType_t wait)
 static void tx_task(void *arg)
 {
     static char cur[TX_MSG_LEN];    /* DMA читает только этот буфер */
+    char next[TX_MSG_LEN];          /* сюда принимаем, пока DMA ещё отправляет cur */
     (void)arg;
     xSemaphoreGive(s_tx_done);
 
     for (;;) {
         app_heartbeat(HB_UART_TX);
-        if (xQueueReceive(s_txq, cur, pdMS_TO_TICKS(100)) != pdPASS) {
+        if (xQueueReceive(s_txq, next, pdMS_TO_TICKS(100)) != pdPASS) {
             continue;
         }
-        /* ждём окончания предыдущей передачи; если DMA завис, сбрасываем его */
+        /* ждём окончания предыдущей передачи; если DMA завис, сбрасываем его.
+         * Только после этого cur свободен для нового сообщения. */
         if (xSemaphoreTake(s_tx_done, pdMS_TO_TICKS(TX_DMA_TIMEOUT_MS)) != pdTRUE) {
             HAL_UART_AbortTransmit(&huart1);
         }
+        memcpy(cur, next, TX_MSG_LEN);
         if (HAL_UART_Transmit_DMA(&huart1, (uint8_t *)cur, (uint16_t)strlen(cur)) != HAL_OK) {
             xSemaphoreGive(s_tx_done);
             uart_tx_dropped++;
